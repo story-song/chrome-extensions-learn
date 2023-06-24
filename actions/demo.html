@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 
+      disable()
+      enable()
+      getBadgeBackgroundColor()
+      getBadgeText()
+      getBadgeTextColor()
+      getPopup()
+      getTitle()
+      getUserSettings()
+      isEnabled()
+      onClicked
+      setBadgeBackgroundColor()
+      setBadgeText()
+      setBadgeTextColor()
+      setIcon()
+      setPopup()
+      setTitle()
+    -->
+  </head>
+  <body>
+    <div>
+      <h4>通过下面的图标来禁用或是启用action</h4>
+      <button id="toggle-btn">禁用/允许</button>
+    </div>
+    <div>
+      <h4>通过下面的操作来操控显示的Popup实例</h4>
+      <select id="popup-options">
+        <option value="/popup.html">默认</option>
+        <option value="/popups/a.html">A</option>
+        <option value="/popups/b.html">B</option>
+        <option value="">点击事件</option>
+      </select>
+
+      <label>
+        <span>当前的popup:</span>
+        <input
+          type="text"
+          style="width: 400px"
+          id="current-popup-value"
+          disabled
+        />
+      </label>
+    </div>
+    <div>
+      <h4>徽章就是浮在action图标上的一个高亮的文字，可以用来表示状态</h4>
+      <label>
+        <input type="text" id="badge-text-input" />
+        <button id="set-badge">设置badge</button>
+      </label>
+
+      <h5>当前badge的文字：<span id="current-badge-text"></span></h5>
+
+      <button id="set-badge-bg-color">设置徽章背景颜色</button>
+      <button id="set-badge-text-color">设置徽章字体颜色</button>
+
+      <h5>
+        当前badge的背景颜色
+        <span id="current-badge-bg-color"></span>
+      </h5>
+
+      <h5>
+        当前badge的字体颜色
+        <span id="current-badge-text-color"></span>
+      </h5>
+    </div>
+
+    <div>
+      <h4>动态设置action图标</h4>
+      <button id="set-icon-button">设置图标</button>
+    </div>
+
+    <div>
+      <h4>设置hover时显示的文字</h4>
+      <label>
+        <input type="text" id="title-text-input" />
+        <button id="set-title">设置title</button>
+      </label>
+
+      <h5>
+        当前的title
+        <span id="current-title"></span>
+      </h5>
+    </div>
+
+    <script src="./demo.js"></script>
+  </body>
+</html>
