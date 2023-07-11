@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h1>创建新的页面</h1>
+      <button id="create-tab">创建</button>
+    </section>
+
+    <section>
+      <h1>查找符合条件的tab</h1>
+      <div>
+        <span>是否激活</span>
+        <span>是</span>
+        <input type="radio" name="isActive" value="1" />
+        <span>否</span>
+        <input type="radio" name="isActive" value="0" />
+      </div>
+      <div>
+        <span>是否属于当前窗口：</span>
+        <span>是</span>
+        <input type="radio" name="isCurrentWindow" value="1" />
+        <span>否</span>
+        <input type="radio" name="isCurrentWindow" value="0" />
+      </div>
+      <div>
+        <span>url(支持正则)：</span>
+        <input type="text" id="url" />
+      </div>
+      <div>
+        <span>title</span>
+        <input type="text" id="title" />
+      </div>
+
+      <div>
+        <span>index</span>
+        <input type="text" id="index" />
+      </div>
+
+      <div>
+        <span>是否被固定</span>
+        <span>是</span>
+        <input type="radio" name="pinned" value="1" />
+        <span>否</span>
+        <input type="radio" name="pinned" value="0" />
+      </div>
+
+      <div>
+        <span>status</span>
+        <select name="status" id="status">
+          <option value="unloaded">unloaded</option>
+          <option value="loading">unloaded</option>
+          <option value="complete">unloaded</option>
+        </select>
+      </div>
+      <button id="query-tab">查找</button>
+
+      <div>
+        <div>查找结果：</div>
+        <div id="search-result"></div>
+      </div>
+    </section>
+
+    <section>
+      <h1>发送消息</h1>
+      <input type="color" id="send-value" />
+      <button id="send-btn">变色吧</button>
+    </section>
+    <script src="./popup.js"></script>
+  </body>
+</html>
