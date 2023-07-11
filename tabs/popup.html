@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        width: 500px;
+      }
+
+      section {
+        margin-top: 20px;
+      }
+
+      div {
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
     <section>
@@ -35,12 +48,10 @@
         <span>title</span>
         <input type="text" id="title" />
       </div>
-
       <div>
         <span>index</span>
         <input type="text" id="index" />
       </div>
-
       <div>
         <span>是否被固定</span>
         <span>是</span>
@@ -48,7 +59,6 @@
         <span>否</span>
         <input type="radio" name="pinned" value="0" />
       </div>
-
       <div>
         <span>status</span>
         <select name="status" id="status">
@@ -69,6 +79,60 @@
       <h1>发送消息</h1>
       <input type="color" id="send-value" />
       <button id="send-btn">变色吧</button>
+    </section>
+
+    <section>
+      <h1>删/改/移/丢弃/复制</h1>
+      <div>
+        <input type="text" id="move-index" />
+        <button id="move">移动当前的tab</button>
+      </div>
+
+      <div>
+        <button id="remove">移除当前的tab</button>
+      </div>
+
+      <div>
+        <button id="reload">刷新当前的tab</button>
+      </div>
+
+      <div>
+        <input type="text" id="discard-value" />
+        <button id="discard">丢弃</button>
+      </div>
+
+      <div>
+        <button id="duplicate">复制</button>
+      </div>
+
+      <div>
+        <input type="text" id="update-value" />
+        <button id="update">更新</button>
+      </div>
+    </section>
+
+    <section>
+      <h1>缩放比</h1>
+      <div>
+        <input type="text" id="zoom" />
+        <button id="zoom-btn">调整</button>
+      </div>
+    </section>
+
+    <section>
+      <h1>分组</h1>
+      <div>
+        <input type="text" id="group-title" />
+        <button id="group">使用查询的结果进行分组</button>
+      </div>
+    </section>
+
+    <section>
+      <h1>导航</h1>
+      <div>
+        <button id="goForward">前进</button>
+        <button id="goBack">前进</button>
+      </div>
     </section>
     <script src="./popup.js"></script>
   </body>
