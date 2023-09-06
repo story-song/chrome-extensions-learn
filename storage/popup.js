@@ -28,10 +28,12 @@ document.getElementById("storage-btn").addEventListener("click", () => {
     chrome.storage.session.set({ session: value }).then(() => {
       console.log("Value was set");
     });
-  } else {
+  } else if (type === "local") {
     chrome.storage.local.set({ local: value }).then(() => {
       console.log("Value is set");
     });
+  } else if (type === "weblocal") {
+    localStorage.setItem("key", value);
   }
 });
 
@@ -40,7 +42,8 @@ document.getElementById("storage-show").addEventListener("click", () => {
     chrome.storage.session.get(["session"]).then(({ session }) => {
       document.getElementById("storage-view").innerHTML = `
         <span>local</span>: ${local} <br>
-        <span>session</span>: ${session}
+        <span>session</span>: ${session} <br>
+        <span>weblocal</span>:${localStorage.getItem("key")}
       `;
     });
   });
