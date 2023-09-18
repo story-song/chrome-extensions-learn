@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>我是sandbox</h1>
+    <p>我是来自parent的data: <span id="show"></span></p>
+    <script>
+      eval('console.log("我可以执行eval")');
+
+      window.addEventListener("message", (event) => {
+        const receivedMessage = event.data;
+        const show = document.getElementById("show");
+        show.innerHTML = receivedMessage;
+      });
+    </script>
+  </body>
+</html>
